@@ -26,7 +26,8 @@
     "prepublish": "yarn build && yarn flow && yarn test",
     "flow": "flow check",
     "prettier": "prettier \"{src,__tests__}/**/*\" --write",
-    "build": "rm -rf lib && babel src --copy-files --out-dir lib && flow-copy-source src lib"
+    "build": "rm -rf lib && babel src --copy-files --out-dir lib && flow-copy-source src lib",
+    "build-debug": "rm -rf lib && babel src --copy-files --out-dir lib --source-maps"
   },
   "files": [
     "package.json",
@@ -50,6 +51,7 @@
     "husky": "^1.3.1",
     "jest": "^23.5.0",
     "lint-staged": "^8.1.1",
+    "lodash": "^4.17.11",
     "nock": "^9.6.1",
     "node-fetch": "^2.2.0",
     "prettier": "^1.16.2",
@@ -58,6 +60,7 @@
   "dependencies": {
     "deep-equal": "^1.0.1",
     "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.4",
     "jest-diff": "^23.6.0",
     "object-hash": "^1.3.1"
   },
