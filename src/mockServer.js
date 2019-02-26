@@ -31,19 +31,6 @@ export type MockMap = {
   [string]: { [string]: MockFunction<BaseMockPrimitive> }
 };
 
-const mocks = {
-  Query: {
-    object: ({ argument }) => ({
-      property: `Query.object.property:${argument}`
-    })
-  },
-  Object: {
-    property: () => 'Object.property'
-  }
-};
-
-(mocks: MockMap);
-
 export type BaseMockPrimitive =
   | boolean
   | number
